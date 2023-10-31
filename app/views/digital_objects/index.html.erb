@@ -72,6 +72,13 @@
               <%#= link_to '<i class="icon-edit"></i>', edit_polymorphic_path([@attachable, digital_object]), :class => "btn", :title => t('edit') %>
               <%#= link_to '<i class="icon-trash"></i>', digital_object, :confirm => t('are_you_sure'), :method => :delete, :class => "btn", :title => t('destroy') %>
               <%= link_to raw('<i class="icon-edit"></i>'), edit_polymorphic_path([@attachable, digital_object]), :class => "btn", :title => t('edit') %>
+              <%= if !ENV['IIIF_SERVER_URL'].nil?
+                    digital_object_relative_url = digital_object.asset(:original)
+                    iiif_image_server_url = digital_object_relative_url[1..digital_object_relative_url.length - 1]
+                    iiif_image_server_url.gsub!('/', '%2f')
+                    link_to raw('<i class="icon-magnet"></i>'), '#', :class => "btn getiiiflink", :data => {:id => ENV['IIIF_SERVER_URL'] + iiif_image_server_url }, :title => 'IIIF' 
+                  end
+              %>
               <%= link_to raw('<i class="icon-trash"></i>'), digital_object, data: {:confirm => t('are_you_sure')}, :method => :delete, :class => "btn", :title => t('destroy') %>
 <%# Upgrade 2.0.0 fine %>
               <%= check_box_tag "digital_object_ids[#{digital_object.id}]", digital_object.id, false, :name => "digital_object_ids[]", :class => "check-digital-object" %>
