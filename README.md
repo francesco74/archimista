@@ -1,6 +1,12 @@
 ## Archimista
 Archimista è un'applicazione web open source per la descrizione di archivi storici. È disponibile in due versioni: standalone e server.
-La versione corrente è la **3.1.1**.
+La versione adottata dalla Rete Documentaria Lucchese è la 3.1.1 in versione server ed è resa disponibile agli enti aderenti.
+
+Nell'architettura implementata, Archimista assume un ruolo centrale in quanto è la banca dati unica della Rete all'interno della quale verranno inseriti i risultati delle varie progettualità. 
+La parte di backend ha modifiche minimali orientate alla sola generazione di link IIIF agli oggetti digitali, riutilizzabili all'interno di una istanza di Omeka-S, per la messa il linea di mostre virtuali in maniera da riutilizzare anche gli oggetti digitali presenti in Archimista.
+La parte di frontend attualmente utilizzata è Archivista [https://github.com/ProgettoArchimista/archivista] sulla quale abbiamo applicato, per adesso, una serie di minime modifiche per meglio integrarlo rispetto alle nostre necessità e lasciandoci aperta la strada ad eventuali aggiornamenti che il progetto originale volesse rilasciare ([https://github.com/francesco74/archivista], [https://github.com/francesco74/archivista-ng] e [https://github.com/francesco74/archimista-api]) e con l'obiettivo di avere la seguente infrastruttura complessiva:
+
+![Alt text](https://sc.provincia.lucca.it/misc/archimista.png "Architettura complessiva del sistema Archimista")
 
 ## Requisiti
 Archimista funziona sui sistemi operativi GNU/Linux, Mac OS X, Windows Vista e superiori. Per Windows XP è necessario utilizzare una versione apposita che viene compilata allo scopo.
@@ -61,6 +67,11 @@ Codex Società Cooperativa, Pavia ([http://www.codexcoop.it](http://www.codexcoo
 TAI S.a.s. ([http://www.taisas.com](http://www.taisas.com))
 Lo sviluppo attuale è curato da INGLOBA360 s.r.l. ([http://www.ingloba360.it](http://www.ingloba360.it))
 
+Provincia di Lucca ([http://bibliolucca.it/SebinaOpacLUA/article/rete-archivistica-lucchese-sezione-archivi/archivi])
+
 ## Licenza
 Archimista è rilasciato sotto licenza GNU General Public License v2.0 o successive.
+
+## Ulteriori informazioni
+Chiunque fosse interessato a contribuire è il benvenuto.
 
