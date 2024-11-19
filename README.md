@@ -75,3 +75,7 @@ Archimista è rilasciato sotto licenza GNU General Public License v2.0 o success
 ## Ulteriori informazioni
 Chiunque fosse interessato a contribuire è il benvenuto.
 
+## Immagine virtualizzata
+E' stata resa disponibile anche una immagine virtualizzata utilizzabile in ambiente Docker o Kubernetes prelevabile all'indirizzo 
+cisco74/provincia_lucca:archimista-3.1.1-1
+
